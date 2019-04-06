@@ -49,14 +49,14 @@ def optimize(parameters, model, criterion, input, target, samples_dir, LR, num_i
             stft_avg_prev = stft
 
 
-            if (j + 1) % save_every == 0 or j == 249:
+            if (j + 1) % save_every == 0:
                 # clip & normalize mask
                 max_mask = stft_minus_sum.max()
                 min_mask = stft_minus_sum.min()
                 atten_map = (max_mask - stft_minus_sum) / (max_mask - min_mask)
                 atten_map[atten_map < residual] = residual
 
-                utils.write_music_stft(stft_full * atten_map, f'{samples_dir}/wiener_{j}.wav', sr, f'wiener', center=center)
+                utils.write_music_stft(stft_full * atten_map, f'{samples_dir}/wiener_{j}.wav', sr, center=center)
                 utils.write_music_stft(stft_full * (1-atten_map), f'{samples_dir}/noise_wiener_{j}.wav', sr, center=center)
 
                 # save the a-priori snr mask as .mat file, which can be integrated with classical speech-enhancement method
