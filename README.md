@@ -44,7 +44,7 @@ $ python DNP.py --run_name demo --noisy_file demo.wav --samples_dir samples --sa
 
 In order to test any other audio file insert the file path after the ```--noisy_file``` option.
 
-The script saves ```.mat``` files of the mask which can be integrated to classiscal speech enhancement methods that can be found in this matlab [toolbox](https://www.crcpress.com/downloads/K14513/K14513_CD_Files.zip)
+The script saves ```.mat``` files of the mask which can be integrated to classical speech enhancement methods that can be found in this matlab [toolbox](https://www.crcpress.com/downloads/K14513/K14513_CD_Files.zip)
 
 ## Reference
 If you found this code useful, please cite the following paper:
