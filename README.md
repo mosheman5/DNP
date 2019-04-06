@@ -31,7 +31,7 @@ $ cd DNP/
 For creating and activating the conda environment:
 ```
 $ conda env create -f environment.yml
-$ source activate DNP
+$ conda activate DNP
 ```
  
 ### 2. Testing
