@@ -1,7 +1,7 @@
 # DNP
 Audio Denoising with Deep Network Priors
 
-This repository provides a PyTorch implementation of "Audio Denoising with Deep Network Priors"
+This repository provides a PyTorch implementation of "Audio Denoising with Deep Network Priors" [(paper)](https://arxiv.org/pdf/1904.07612.pdf)
 
 The method trains on noisy audio signal and provides a the clean underlying signal. **Comparison with traditional unsupervised methods can be found [here](https://mosheman5.github.io/DNP/)**
 
