@@ -7,9 +7,10 @@ The method trains on noisy audio signal and provides a the clean underlying sign
 
 The method is completely unsupervised and only trains on the specific audio clip that is being denoised.
 
-The algorithm is based on the observation that modeling noise in the signal is harder that a clean signal. 
+The algorithm is based on the observation that modeling noise in the signal is harder than a clean signal. 
 During the fitting we observe flactuations in different stages of the train. 
 By calculating the amount of difference between outputs in the time-frequency domain we create a robust spectral mask used for denoising the noisy output. 
+![Accumulator](./accumulator.png)
 
 ## Dependencies
 A conda environment file is available in the repository.
@@ -42,13 +43,19 @@ To test on the demo speech file:
 $ python DNP.py --run_name demo --noisy_file demo.wav --samples_dir samples --save_every 50 --num_iter 5000 --LR 0.001
 ```
 
-In order to test any other audio file insert the file path after the ```--noisy_file``` option.
+To test on any other audio file insert the file path after the ```--noisy_file``` option.
 
-The script saves ```.mat``` files of the mask which can be integrated to classical speech enhancement methods that can be found in this matlab [toolbox](https://www.crcpress.com/downloads/K14513/K14513_CD_Files.zip)
+A jupyter notebook with visualization is available: ```dnp.ipynb```
 
 ## Reference
 If you found this code useful, please cite the following paper:
-```TBD
+```
+@article{michelashvili2019DNP,
+  title={Audio Denoising with Deep Network Priors},
+  author={Michael Michelashvili and Lior Wolf},
+  journal={arXiv preprint arXiv:1904.07612},
+  year={2019}
+}
 ```
 
 ## Acknowledgement
