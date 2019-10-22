@@ -29,11 +29,14 @@ h2 {
   <body>
     <h1 align="center"> Samples for Audio Denoising with Deep Network Priors</h1>
     <p> A comparison of our unsupervised audio denoising based on deep network priors method with the classical unsupervised audio denoising baselines.</p>
-    <p> It seems that our results are cleaner and put less distortion to the speech signal. We outperform the baselines in any evaluation metric, given in our paper</p>
+    <p> It seems that our results are cleaner and put less distortion to the speech signal compared to most unsupervised methods. </p>
+    <p> On the second table we present a comparison between our method to MMSE-LSA when the unvoiced parts at the edges of the clips are trimmed.</p>
+    <p> Our method seems indifferent to the change while MMSE-LSA suffers from voice distortions due the dependence on the noise statistics at the clip's beginning.  </p>
 <h2 align="left">Audio Demo on Evaluation subset: (better to use headphones)</h2>
     <div>
       <table border = "1" class="inlineTable">
         <col width="200">
+        <col width="150">
         <col width="150">
         <col width="150">
         <col width="150">
@@ -51,12 +54,13 @@ h2 {
              <th>Clean Sample</th>
              <th>Our - DNP</th>
              <th>Connected-Frequency</th>
-	     <th>Doblinger</th>
+	         <th>Doblinger</th>
              <th>Hirsch</th>
-	     <th>IMCRA</th>
+	         <th>IMCRA</th>
              <th>Martin</th>
-	     <th>MCRA</th>
+	         <th>MCRA</th>
              <th>MCRA2</th>
+             <th>MMSE-LSA</th>
         </tr>
 
         <tr>
@@ -69,7 +73,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_001.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_001.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -121,6 +125,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
 <tr>
@@ -133,7 +143,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_002.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_002.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -185,6 +195,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
 <tr>
@@ -197,7 +213,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_003.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_003.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -249,6 +265,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
 <tr>
@@ -261,7 +283,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_005.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_005.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -313,6 +335,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_005.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
 <tr>
@@ -325,7 +353,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_006.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_006.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -377,6 +405,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_006.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
 <tr>
@@ -389,7 +423,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p257_001.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p257_001.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -441,6 +475,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p257_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
 <tr>
@@ -453,7 +493,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p257_002.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p257_002.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -505,6 +545,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p257_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
 <tr>
@@ -517,7 +563,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p257_003.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p257_003.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -569,6 +615,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p257_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
 <tr>
@@ -581,7 +633,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p257_004.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p257_004.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -633,6 +685,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p257_004.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
           <tr>
@@ -645,7 +703,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_017.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_017.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -697,6 +755,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_017.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
           <tr>
@@ -709,7 +773,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_019.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_019.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -761,6 +825,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_019.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
           <tr>
@@ -773,7 +843,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_020.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_020.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -825,6 +895,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_020.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
           <tr>
@@ -837,7 +913,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p232_021.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p232_021.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -889,6 +965,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p232_021.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
           <tr>
@@ -901,7 +983,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p257_136.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p257_136.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -953,6 +1035,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p257_136.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
           <tr>
@@ -965,7 +1053,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p257_137.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p257_137.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -1017,6 +1105,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p257_137.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
           <tr>
@@ -1029,7 +1123,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p257_138.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p257_138.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -1081,6 +1175,12 @@ h2 {
                Your browser does not support the audio element.
              </audio>
            </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p257_138.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
         </tr>
 
           <tr>
@@ -1093,7 +1193,7 @@ h2 {
            </td>
            <td>
              <audio controls style="width: 150px;">
-               <source src="wav_files/clean_samples/p257_139.wav" type="audio/wav">
+               <source src="wav_files/trimmed/clean/p257_139.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
@@ -1142,6 +1242,510 @@ h2 {
            <td>
              <audio controls style="width: 150px;">
                <source src="wav_files/baselines/mcra2/p257_139.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/baselines/log_mmse/p257_139.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+      </table>
+    </div>
+
+
+<p> </p>
+<h2 align="left">Audio Demo on Evaluation subset, clips with trimmed silence: (better to use headphones)</h2>
+    <div>
+      <table border = "1" class="inlineTable">
+        <col width="200">
+        <col width="150">
+        <col width="150">
+        <col width="150">
+        <col width="150">
+        <tr>
+        <tr>
+             <th>Name</th>
+             <th>Noisy Sample</th>
+             <th>Clean Sample</th>
+             <th>Our - DNP</th>
+             <th>MMSE-LSA</th>
+        </tr>
+
+        <tr>
+           <th> p232_001 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+<tr>
+           <th> p232_002 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+<tr>
+           <th> p232_003 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+<tr>
+           <th> p232_005 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_005.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_005.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_005.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_005.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+<tr>
+           <th> p232_006 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_006.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_006.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_006.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_006.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+<tr>
+           <th> p257_001 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p257_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p257_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p257_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p257_001.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+<tr>
+           <th> p257_002 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p257_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p257_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p257_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p257_002.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+<tr>
+           <th> p257_003 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p257_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p257_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p257_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p257_003.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+<tr>
+           <th> p257_004 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p257_004.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p257_004.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p257_004.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p257_004.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+          <tr>
+           <th> p232_017 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_017.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_017.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_017.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_017.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+          <tr>
+           <th> p232_019 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_019.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_019.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_019.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_019.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+          <tr>
+           <th> p232_020 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_020.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_020.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_020.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_020.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+          <tr>
+           <th> p232_021 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p232_021.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p232_021.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p232_021.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p232_021.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+          <tr>
+           <th> p257_136 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p257_136.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p257_136.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p257_136.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p257_136.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+          <tr>
+           <th> p257_137 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p257_137.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p257_137.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p257_137.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p257_137.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+          <tr>
+           <th> p257_138 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p257_138.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p257_138.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p257_138.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p257_138.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+        </tr>
+
+          <tr>
+           <th> p257_139 </th>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/noisy/p257_139.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/clean/p257_139.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/DNP/p257_139.wav" type="audio/wav">
+               Your browser does not support the audio element.
+             </audio>
+           </td>
+           <td>
+             <audio controls style="width: 150px;">
+               <source src="wav_files/trimmed/log_mmse/p257_139.wav" type="audio/wav">
                Your browser does not support the audio element.
              </audio>
            </td>
