@@ -94,6 +94,9 @@ def load_wav_to_torch(full_path):
     Loads wavdata into torch array
     """
     data, sampling_rate = sf.read(full_path, dtype='int16')
+    if len(data.shape) > 1:
+        print('Mixing the input wav to a mono file')
+        data = data.mean(axis=1)
     return torch.FloatTensor(data.astype(np.float32)), sampling_rate
 
 
