@@ -22,21 +22,23 @@ def run_dap(curr_num, parts_num, big_run_name):
         print("Creating directory: {}".format(outputs_dir))
         os.makedirs(outputs_dir)
     # dataset_list = os.listdir(noisy_dir)
-    # dataset_list = [Id for Id in os.listdir(noisy_dir) if not os.path.isfile(os.path.join(outputs_dir, Id.split('.wav')[0], 'net_output_249.wav'))]
-    dataset_list = [Id for Id in os.listdir(noisy_dir)]
+    dataset_list = [Id for Id in os.listdir(noisy_dir) if not os.path.isfile(os.path.join(outputs_dir, Id.split('.wav')[0], 'net_output_1000.wav'))]
+    # dataset_list = [Id for Id in os.listdir(noisy_dir)]
     dataset_list = dataset_list[:len(dataset_list) - len(dataset_list) % parts_num]
     dataset_list = dataset_list[len(dataset_list)//parts_num * curr_num:len(dataset_list)//parts_num * (curr_num+1)]
 
     for it, vector in enumerate(tqdm(dataset_list)):
         noisy_file = os.path.join(noisy_dir, vector)
         run_name = vector.split('.wav')[0]
-        dnp(run_name=run_name, noisy_file=noisy_file,
+        try:
+            dnp(run_name=run_name, noisy_file=noisy_file,
                         samples_dir=outputs_dir, LR=0.001, num_iter=1000, save_every=250)
-
+        except RuntimeError:
+            print('run_name')
 
 if __name__ == '__main__':
 
-    run_dap(curr_num=0, parts_num=4, big_run_name='DAP_baseline')
+    run_dap(curr_num=0, parts_num=1, big_run_name='DAP_baseline')
 
 
 

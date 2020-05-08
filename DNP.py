@@ -23,7 +23,7 @@ def optimize(model, criterion, input, target_stft, samples_dir, LR, num_iter, sr
         optimizer.step()
 
         # write net output
-        if j >0 and (j % save_every == 0):
+        if j > 5 and ((j + 1) % save_every == 0):
             out_denorm = out.squeeze(0).detach() + 0
             out_write = torchaudio.functional.istft(out_denorm.permute(1, 2, 0), n_fft=nfft, hop_length=64)
             out_write = out_write.detach().cpu().numpy()
@@ -32,7 +32,7 @@ def optimize(model, criterion, input, target_stft, samples_dir, LR, num_iter, sr
             out_denorm[:, :bandpass, :] = 0 * out_denorm[:, :bandpass, :]
             out_write = torchaudio.functional.istft(out_denorm.permute(1, 2, 0), n_fft=nfft, hop_length=64)
             out_write = out_write.detach().cpu().numpy()
-            utils.write_norm_music(out_write, f'{samples_dir}/net_output_filt_{j}.wav', sr)
+            utils.write_norm_music(out_write, f'{samples_dir}/net_output_filt_{j+1}.wav', sr)
 
 
 def dnp(run_name, noisy_file, samples_dir, LR=0.001, num_iter=5000, save_every=50):
