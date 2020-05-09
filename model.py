@@ -24,6 +24,7 @@ class UNet(nn.Module):
         self.conv = nn.Conv2d(
             in_channels=up_out_channels[-1], out_channels=down_in_channels[0], kernel_size=1
         )
+        torch.nn.init.normal_(self.conv.weight, mean=0.0, std=0.02)
 
     def forward(self, x):
         enc1 = self.encoder1(x)
@@ -59,6 +60,7 @@ class ConvDeform(nn.Module):
         pad_reg = (kernel - 1) // 2
         self.conv = nn.Conv2d(in_channels, out_channels, kernel_size=kernel, dilation=(dilation, 1),
                               padding=(pad_dialted, pad_reg))
+        torch.nn.init.normal_(self.conv.weight, mean=0.0, std=0.02)
         self.norm = nn.InstanceNorm2d(num_features=out_channels)
         self.activ = nn.ReLU()
 
