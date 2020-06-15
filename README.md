@@ -50,11 +50,11 @@ A jupyter notebook with visualization is available: ```dnp.ipynb```
 ## Reference
 If you found this code useful, please cite the following paper:
 ```
-@article{michelashvili2019DNP,
-  title={Audio Denoising with Deep Network Priors},
+@article{michelashvili2020denoising,
+  title={Speech Denoising by Accumulating Per-Frequency Modeling Fluctuations},
   author={Michael Michelashvili and Lior Wolf},
   journal={arXiv preprint arXiv:1904.07612},
-  year={2019}
+  year={2020}
 }
 ```
 
