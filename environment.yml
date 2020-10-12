@@ -3,6 +3,7 @@ channels:
   - pytorch
   - conda-forge
   - defaults
+  - conda-forge/label/gcc7
 dependencies:
   - audioread=2.1.6=py37_0
   - blas=1.0=mkl
